@@ -28,7 +28,7 @@ module.exports = msgHandler = async (client, message) => {
         let { body } = message
         const { name } = chat
         let { pushname, verifiedName } = sender
-        const prefix = '#'
+        const prefix = '^^'
         body = (type === 'chat' && body.startsWith(prefix)) ? body : ((type === 'image' && caption || type === 'video' && caption) && caption.startsWith(prefix)) ? caption : ''
         const command = body.slice(prefix.length).trim().split(/ +/).shift().toLowerCase()
         const args = body.slice(prefix.length).trim().split(/ +/).slice(1)
@@ -48,7 +48,7 @@ module.exports = msgHandler = async (client, message) => {
         const isGroupAdmins = isGroupMsg ? groupAdmins.includes(sender.id) : false
         const isBotGroupAdmins = isGroupMsg ? groupAdmins.includes(botNumber + '@c.us') : false
         const isBanned = ban.includes(chatId)
-        const owner = 'Your-phone-number' // eg 9190xxxxxxxx
+        const owner = '6282138663981' // eg 9190xxxxxxxx
         const isowner = owner+'@c.us' == sender.id 
 
         msgFilter.addFilter(from)
@@ -166,13 +166,13 @@ module.exports = msgHandler = async (client, message) => {
             }
             await client.sendFileFromUrl(from, pfp, 'group.png', `*${groupname}* 
 
-🌐️ *Members: ${totalMem}*
+*Members: ${totalMem}*
 
-💌️ *Welcome: ${welgrp}*
+*Welcome: ${welgrp}*
 
-⚜️ *NSFW: ${ngrp}*
+*NSFW: ${ngrp}*
 
-📃️ *Group Description* 
+*Group Description* 
 
 ${desc}`)
         break
@@ -423,17 +423,18 @@ ${desc}`)
               }
             const { title, synopsis, episodes, url, rated, score, image_url } = parsed.results[0]
             const content = `*Anime Found!*
-✨️ *Title:* ${title}
 
-🎆️ *Episodes:* ${episodes}
+*Title:* ${title}
 
-💌️ *Rating:* ${rated}
+*Episodes:* ${episodes}
 
-❤️ *Score:* ${score}
+*Rating:* ${rated}
 
-💚️ *Synopsis:* ${synopsis}
+*Score:* ${score}
 
-🌐️ *URL*: ${url}`
+*Synopsis:* ${synopsis}
+
+*URL*: ${url}`
 
             const image = await bent("buffer")(image_url)
             const base64 = `data:image/jpg;base64,${image.toString("base64")}`
