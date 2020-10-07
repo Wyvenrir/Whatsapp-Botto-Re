@@ -34,13 +34,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SomnathDas/whatsapp-botto-re.git"
+    "url": "git+https://github.com/Wyvenrir/whatsapp-botto-re.git"
   },
   "keywords": [
     "Whatsapp-Bot"
   ],
   "bugs": {
-    "url": "https://github.com/SomnathDas/whatsapp-botto-re.git"
+    "url": "https://github.com/Wyvenrir/whatsapp-botto-re.git"
   },
-  "homepage": "https://github.com/SomnathDas/whatsapp-botto-re.git"
+  "homepage": "https://github.com/Wyvenrir/whatsapp-botto-re.git"
 }
